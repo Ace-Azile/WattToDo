@@ -4,11 +4,11 @@
 public class Task {
     private int staminaCost;
     private String name;
-    private Date date;
-    public Task(int cost, String name, Date date) {
+    private Boolean active;
+    public Task(int cost, String name) {
         setStaminaCost(cost);
         this.name = name;
-        this.setDate(date);
+        setActive(true);
     }
     
     public String getName() {
@@ -20,15 +20,18 @@ public class Task {
     public void setStaminaCost(int staminaCost) {
         this.staminaCost = staminaCost;
     }
-    public Date getDate() {
-        return date;
-    }
-    public void setDate(Date date) {
-        this.date = date;
-    }
+    
 
     public void print() {
-        System.out.println(name + " date: " + date.print() + " cost: " + staminaCost);
+        System.out.println(name + " cost: " + staminaCost);
         
+    }
+
+    public Boolean getActive() {
+        return active;
+    }
+
+    public void setActive(Boolean active) {
+        this.active = active;
     }
 }
