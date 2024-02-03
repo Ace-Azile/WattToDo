@@ -30,9 +30,11 @@ public class LinkedList {
     public void add(Task data) {
         Node temp = head;
         Node newNode = new Node(data);
+        //get to end of list
         while(temp.getNextNode() != null) {
             temp = temp.getNextNode();
         }
+        //append to ens
         temp.setNextNode(newNode);
     }
     /**
@@ -41,10 +43,20 @@ public class LinkedList {
      */
     public void remove(Task data) {
         Node temp = head;
+        boolean isThere = false;
+        //get to list where data matches
         while(temp.getNextNode() != null && temp.getNextNode().getData()!= data) {
             temp = temp.getNextNode();
+            //if data matches set to true
+            if(temp.getNextNode().getData() == data) {
+                isThere = true;
+            }
         }
-        temp.setNextNode(temp.getNextNode().getNextNode());
+        //if true remove node
+        if(isThere) {
+            temp.setNextNode(temp.getNextNode().getNextNode());
+        }
+        
     }
     /**
      * makes it so each node in list prints until there are no more nodes
