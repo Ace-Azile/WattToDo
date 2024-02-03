@@ -14,6 +14,7 @@ public class Processor {
         while(input != 5) {
             System.out.println("enter 1 to add a task, enter 2 to do a task, enter 5 to quit");
             input = scanner.nextInt();
+            
             if (input == 1) {
                 System.out.println("enter task name:");
                 String taskName = scanner.next();
@@ -32,6 +33,7 @@ public class Processor {
             else if(input == 2) {
                 
             }
+            todo.printList();
             
         }
         scanner.close();
