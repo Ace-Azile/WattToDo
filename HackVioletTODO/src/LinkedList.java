@@ -1,13 +1,13 @@
 
-public class LinkedList<T> {
-    private Node<T> head;
+public class LinkedList {
+    private Node head;
     private int size;
     /**
      * constructor
      * @param data initial data
      */
-    public LinkedList(T data) {
-        head = new Node<T>(data);
+    public LinkedList(Task data) {
+        head = new Node(data);
         size = 0;
     }
     /**
@@ -21,9 +21,9 @@ public class LinkedList<T> {
      * adds a new node
      * @param data data for new node
      */
-    public void add(T data) {
-        Node<T> temp = head;
-        Node<T> newNode = new Node<T>(data);
+    public void add(Task data) {
+        Node temp = head;
+        Node newNode = new Node(data);
         while(temp.getNextNode() != null) {
             temp = temp.getNextNode();
         }
@@ -33,12 +33,19 @@ public class LinkedList<T> {
      * removes a node
      * @param data the data of the node to be removed.
      */
-    public void remove(T data) {
-        Node<T> temp = head;
+    public void remove(Task data) {
+        Node temp = head;
         while(temp.getNextNode() != null && temp.getNextNode().getData()!= data) {
             temp = temp.getNextNode();
         }
         temp.setNextNode(temp.getNextNode().getNextNode());
+    }
+    public void printList() {
+        Node temp = head;
+        while(temp.getNextNode() != null) {
+            temp.print();
+        }
+        
     }
     
     

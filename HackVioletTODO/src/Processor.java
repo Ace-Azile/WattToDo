@@ -1,15 +1,16 @@
 import java.util.Scanner;
 
 public class Processor {
-    LinkedList<Task> todo;
+    LinkedList todo;
     public Processor() {
         Date newDate = new Date(1, 1, 1);
         Task placeholder = new Task(0, "placeholder", newDate);
-        todo = new LinkedList<Task>(placeholder);
+        todo = new LinkedList(placeholder);
     }
     public void run() {
         int input = 0;
         Scanner scanner = new Scanner(System.in);
+        todo.printList();
         while(input != 5) {
             System.out.println("enter 1 to add a task, enter 2 to do a task, enter 5 to quit");
             input = scanner.nextInt();
