@@ -23,4 +23,7 @@ public class Date {
     public int getYear() {
         return year;
     }
+    public String print() {
+        return day +"/" + month + "/" + year;
+    }
 }

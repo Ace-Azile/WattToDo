@@ -26,4 +26,9 @@ public class Task {
     public void setDate(Date date) {
         this.date = date;
     }
+
+    public void print() {
+        System.out.println(name + " date: " + date.print() + " cost: " + staminaCost);
+        
+    }
 }

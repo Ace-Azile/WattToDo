@@ -35,7 +35,7 @@ public class Node {
         this.data = data;
     }
     public void print() {
-        
+        data.print();
         
     }
 }
