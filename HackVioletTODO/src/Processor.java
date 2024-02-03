@@ -34,5 +34,6 @@ public class Processor {
             }
             
         }
+        scanner.close();
     }
 }
