@@ -1,6 +1,12 @@
 
 public class LinkedList {
+    /**
+     * first node in list
+     */
     private Node head;
+    /**
+     * size of list
+     */
     private int size;
     /**
      * constructor
@@ -40,6 +46,9 @@ public class LinkedList {
         }
         temp.setNextNode(temp.getNextNode().getNextNode());
     }
+    /**
+     * makes it so each node in list prints until there are no more nodes
+     */
     public void printList() {
         Node temp = head;
         while(temp.getNextNode() != null) {

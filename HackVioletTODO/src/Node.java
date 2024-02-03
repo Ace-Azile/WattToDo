@@ -1,7 +1,14 @@
 
 public class Node {
     private Task data;
+    /**
+     * next node in list
+     */
     private Node nextNode;
+    /**
+     * constructor
+     * @param data data for node
+     */
     public Node(Task data) {
         this.setData(data);
         setNextNode(null);
@@ -34,6 +41,9 @@ public class Node {
     public void setData(Task data) {
         this.data = data;
     }
+    /**
+     * prints the data
+     */
     public void print() {
         data.print();
         
